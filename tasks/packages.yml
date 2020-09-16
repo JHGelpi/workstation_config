@@ -5,7 +5,6 @@
           - terminator
           - powertop
           - slack
-            #- google-chrome-stable.x86_64
           - gnome-tweak-tool
             #- sublime-text.x86_64
             #- insync.x86_64
@@ -13,3 +12,8 @@
           - tlp
           - tlp-rdw
 
+- name: Install chrome
+  dnf: name=https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+
+  #- name: Install sublime text
+  #dnf: 

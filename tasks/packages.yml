@@ -4,3 +4,12 @@
           - htop
           - terminator
           - powertop
+          - slack
+            #- google-chrome-stable.x86_64
+          - gnome-tweak-tool
+            #- sublime-text.x86_64
+            #- insync.x86_64
+          - python3
+          - tlp
+          - tlp-rdw
+

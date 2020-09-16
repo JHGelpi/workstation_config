@@ -1,9 +1,8 @@
 - hosts: localhost
   become: true
+  pre_tasks:
+          - name: update repositories
+            dnf: update_cache=yes
+            changed_when: False
   tasks:
-          - name: Install packages
-            dnf: name={{item}}
-            with_items:
-                    - htop
-                    - terminator
-                    - powertop
+          - include: tasks/packages.yml

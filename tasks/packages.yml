@@ -1,5 +1,5 @@
 - name: Install packages
-  dnf: name= ['htop', 'terminator', 'powertop', 'slack', 'gnome-tweak-tool', 'python3', 'tlp', 'tlp-rdw']
+  dnf: name: ['htop', 'terminator', 'powertop', 'slack', 'gnome-tweak-tool', 'python3', 'tlp', 'tlp-rdw']
 
 - name: Install chrome
   dnf: name=https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm

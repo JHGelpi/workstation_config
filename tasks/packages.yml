@@ -1,12 +1,12 @@
 tasks:
-  - name: Enable Flathub
-    become: yes
-      flatpak: https://flathub.org/repo/flathub.flatpakrepo
+  #- name: Enable Flathub
+  #  become: yes
+  #    flatpak: https://flathub.org/repo/flathub.flatpakrepo
       #command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   
-  - name: Install Fractal
-    become: yes
-      command: flatpak install --assumeyes flathub org.gnome.Fractal
+  #- name: Install Fractal
+  #  become: yes
+  #    command: flatpak install --assumeyes flathub org.gnome.Fractal
 
 - name: Enable RPM Fusion
   #https://obsproject.com/wiki/install-instructions#fedora-installation-unofficial
@@ -29,9 +29,10 @@ tasks:
       - gimp
     state: present
 
-- name: Install Spotify
-  become: yes
-  command: flatpak install --assumeyes flathub com.spotify.Client
+- name: Install the spotify flatpak
+  flatpak:
+    name:  https://s3.amazonaws.com/alexlarsson/spotify-repo/spotify.flatpakref
+    state: present
 
 - name: Install OBS Project
   #https://obsproject.com/wiki/install-instructions#fedora-installation-unofficial

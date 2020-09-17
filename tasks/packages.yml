@@ -1,19 +1,8 @@
 - name: Install packages
-  dnf: name={{item}}
-  with_items:
-          - htop
-          - terminator
-          - powertop
-          - slack
-          - gnome-tweak-tool
-            #- sublime-text.x86_64
-            #- insync.x86_64
-          - python3
-          - tlp
-          - tlp-rdw
+  dnf: name=['htop', 'terminator', 'powertop', 'slack', 'gnome-tweak-tool', 'python3', 'tlp', 'tlp-rdw']
 
 - name: Install chrome
   dnf: name=https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 
-  #- name: Install sublime text
-  #dnf: 
+  #Install sublime text
+  #Install insync 

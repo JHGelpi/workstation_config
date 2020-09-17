@@ -27,6 +27,7 @@
       - tlp
       - tlp-rdw
       - gimp
+      - obs-studio
     state: present
 
 - name: Install the spotify flatpak
@@ -34,10 +35,10 @@
     name:  https://s3.amazonaws.com/alexlarsson/spotify-repo/spotify.flatpakref
     state: present
 
-- name: Install OBS Project
+#- name: Install OBS Project
   #https://obsproject.com/wiki/install-instructions#fedora-installation-unofficial
-  dnf:
-          - obs-studio
+#  dnf:
+#          - obs-studio
 
 - name: Install chrome
   dnf: 

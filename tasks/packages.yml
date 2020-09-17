@@ -1,16 +1,14 @@
 - name: Install packages
   dnf: 
-        name: "{{ packages }}"
-                vars:
-                        packages:
-                                - htop
-                                - terminator
-                                - powertop
-                                - slack
-                                - gnome-tweak-tool
-                                - python3
-                                - tlp
-                                - tlp-rdw
+        name:
+                - htop 
+                - terminator
+                - powertop
+                - slack
+                - gnome-tweak-tool
+                - python3
+                - tlp
+                - tlp-rdw
         state: present
 
 - name: Install chrome

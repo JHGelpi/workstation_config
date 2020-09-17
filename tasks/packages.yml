@@ -9,17 +9,17 @@
 - name: Install packages
   dnf: 
     name:
-      - snapd
-      - htop 
-      - terminator
-      - powertop
-      - slack
-      - gnome-tweak-tool
-      - python3
-      - tlp
-      - tlp-rdw
+      #- snapd
+      - htop #This works
+      - terminator #This works
+      - powertop #This works
+      - slack #This works
+      - gnome-tweak-tool #This works
+      - python3 #This works
+      - tlp #This works
+      - tlp-rdw #This works
       - gimp
-      - obs-studio
+      #- obs-studio
     state: present
 
 - name: Install the spotify flatpak

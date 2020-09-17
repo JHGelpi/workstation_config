@@ -1,8 +1,21 @@
 - name: Install packages
-  dnf: ['htop', 'terminator', 'powertop', 'slack', 'gnome-tweak-tool', 'python3', 'tlp', 'tlp-rdw']
+  dnf: 
+        name:
+                - htop 
+                - terminator
+                - powertop
+                - slack
+                - gnome-tweak-tool
+                - python3
+                - tlp
+                - tlp-rdw
+        state: present
 
 - name: Install chrome
-  dnf: name=https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+  dnf: 
+        name: 
+                - https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+        state: present
 
   #Install sublime text
   #Install insync 

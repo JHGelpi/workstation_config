@@ -1,15 +1,5 @@
-#tasks:
-  #- name: Enable Flathub
-  #  become: yes
-  #    flatpak: https://flathub.org/repo/flathub.flatpakrepo
-      #command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-  
-  #- name: Install Fractal
-  #  become: yes
-  #    command: flatpak install --assumeyes flathub org.gnome.Fractal
-
 - name: Enable RPM Fusion
-  #https://obsproject.com/wiki/install-instructions#fedora-installation-unofficial
+#https://obsproject.com/wiki/install-instructions#fedora-installation-unofficial
   dnf: 
         name: 
                 - https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -35,22 +25,10 @@
     name:  https://s3.amazonaws.com/alexlarsson/spotify-repo/spotify.flatpakref
     state: present
 
-#- name: Install OBS Project
-  #https://obsproject.com/wiki/install-instructions#fedora-installation-unofficial
-#  dnf:
-#          - obs-studio
-
 - name: Install chrome
-  dnf: 
+  dnf:
         name: 
                 - https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
         state: present
-
-#- name: Remove packages
-      #become: yes
-#      package:
-#              name: rhythmbox
-#      state: absent
-  
   #Install sublime text
   #Install insync

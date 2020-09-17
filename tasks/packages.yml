@@ -1,11 +1,11 @@
-- name: Enable the RPM Fusion repository
-  dnf:
-    name: 
-      --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-      --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm
-    state: present
-  name: subscription-manager repos --enable "codeready-builder-for-rhel-8-$(uname -m)-rpms"
-
+#- name: Enable the RPM Fusion repository
+#  dnf:
+#    name: 
+#      - https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+#      - https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm
+#    state: present
+#  name: subscription-manager repos --enable "codeready-builder-for-rhel-8-$(uname -m)-rpms"
+#
 - name: Install packages
   dnf: 
     name:

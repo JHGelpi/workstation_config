@@ -46,7 +46,7 @@ tasks:
         state: present
 
 - name: Remove packages
-      become: yes
+      #become: yes
       package:
               name: rhythmbox
       state: absent

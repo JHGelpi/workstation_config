@@ -18,7 +18,7 @@
       - python3 #This works
       - tlp #This works
       - tlp-rdw #This works
-      - gimp
+      #- gimp
       #- obs-studio
     state: present
 

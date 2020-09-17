@@ -1,7 +1,8 @@
 tasks:
   - name: Enable Flathub
     become: yes
-      command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+      flathub: https://flathub.org/repo/flathub.flatpakrepo
+      #command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   
   - name: Install Fractal
     become: yes

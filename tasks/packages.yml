@@ -45,11 +45,11 @@ tasks:
                 - https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
         state: present
 
-- name: Remove packages
+#- name: Remove packages
       #become: yes
-      package:
-              name: rhythmbox
-      state: absent
+#      package:
+#              name: rhythmbox
+#      state: absent
   
   #Install sublime text
   #Install insync

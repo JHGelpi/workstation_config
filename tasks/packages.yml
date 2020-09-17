@@ -9,7 +9,7 @@
 - name: Install packages
   dnf: 
     name:
-      #- snapd
+      - snapd
       - htop #This works
       - terminator #This works
       - powertop #This works
@@ -18,8 +18,8 @@
       - python3 #This works
       - tlp #This works
       - tlp-rdw #This works
-      #- gimp
-      #- obs-studio
+      - gimp
+      - obs-studio
     state: present
 
 - name: Install the spotify flatpak

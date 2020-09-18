@@ -34,7 +34,7 @@
     state: present
     key: https://download.sublimetext.com/sublimehq-rpm-pub.gpg
 
-  - name: Add repository
+- name: Add repository
     yum_repository:
       name: sublime-text.repo
       description: Sublime text repo

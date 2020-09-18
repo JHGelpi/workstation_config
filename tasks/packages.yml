@@ -22,10 +22,10 @@
       - "https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
     state: present
 
-- name: Install flatpak packages
+- name: Install spotify flatpak
   flatpak:
     name:
-      - "com.spotify.Client"
+      - https://flathub.org/repo/appstream/com.spotify.Client.flatpakref
     state: present
 
 #- name: Import gpg key for sublime text

@@ -6,41 +6,46 @@
       - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ansible_distribution_major_version}}.noarch.rpm"
     state: present
   when: ansible_distribution == 'Fedora'
-#- name: Install snapd
-#  dnf: 
-#    name: snapd
-
-#- name: Enable snapd service
-#  systemd:
-#    state: started
-#    name: snapd.socket
 
 - name: Install packages
   dnf: 
     name:
-      #- snapd
-      - htop #This works
-      - terminator #This works
-      - powertop #This works
-      - slack #This works
-      - gnome-tweak-tool #This works
-      - python3 #This works
-      - tlp #This works
-      - tlp-rdw #This works
-      - gimp #This works
+      - htop
+      - terminator
+      - powertop
+      - slack
+      - gnome-tweak-tool
+      - python3
+      - tlp
+      - tlp-rdw
+      - gimp
+      - "https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
     state: present
 
-#- name: Install snapd packages
-#  snap:
-#    name:
-#      - obs-studio
-#      - spotify
-#    state: present
+- name: Install flatpak packages
+  flatpak:
+    name:
+      - com.spotify.Client
+    state: present
 
-- name: Install chrome
-  dnf:
-        name: 
-                - https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-        state: present
-  #Install sublime text
+- name: Install sublime text
+#Reference https://computingforgeeks.com/how-to-install-sublime-text-3-on-centos-rhel-8/
+  - rpm_key:
+      state: present
+      key: https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+  - name: Add repository
+    yum_repository:
+      name: sublime-text.repo
+      description: Sublime text repo
+      baseurl: https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+    dnf:
+      name:
+        - sublime-text
+      state: present
+
+#- name: Install chrome
+#  dnf:
+#        name: 
+#                - https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+#        state: present
   #Install insync

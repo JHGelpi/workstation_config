@@ -32,7 +32,6 @@
     name: sublime-text.repo
     description: Sublime text repo
     baseurl: https://download.sublimetext.com/rpm/stable/{{ansible_architecture}}
-    #baseurl: https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
     enabled: yes
     gpgcheck: yes
     gpgkey: https://download.sublimetext.com/sublimehq-rpm-pub.gpg
@@ -43,10 +42,4 @@
     name:
       - sublime-text
     state: present
-
-#- name: Install chrome
-#  dnf:
-#        name: 
-#                - https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-#        state: present
-  #Install insync
+#Install insync

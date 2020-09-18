@@ -3,15 +3,14 @@
     name: "https://download1.rpmfusion.org/free/el/rpmfusion-free-release-{{ansible_distribution_major_version}}.noarch.rpm"
     state: present
   when: ansible_distribution == 'Fedora'
+#- name: Install snapd
+#  dnf: 
+#    name: snapd
 
-- name: Install snapd
-  dnf: 
-    name: snapd
-
-- name: Enable snapd service
-  systemd:
-    state: started
-    name: snapd.socket
+#- name: Enable snapd service
+#  systemd:
+#    state: started
+#    name: snapd.socket
 
 - name: Install packages
   dnf: 

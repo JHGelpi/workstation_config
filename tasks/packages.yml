@@ -31,11 +31,12 @@
   yum_repository:
     name: sublime-text.repo
     description: Sublime text repo
-    baseurl: https://download.sublimetext.com/rpm/stable/x86_64/
-    #sublime-text.repo
+    baseurl: https://download.sublimetext.com/rpm/stable/{{ansible_architecture}}
+    #baseurl: https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
     enabled: yes
     gpgcheck: yes
     gpgkey: https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+    state: present
 
 - name: Install sublime-text
   dnf:

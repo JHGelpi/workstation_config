@@ -25,13 +25,14 @@
       - tlp #This works
       - tlp-rdw #This works
       - gimp #This works
-      - obs-studio
     state: present
 
-- name: Install the spotify flatpak
-  flatpak:
-    name:  https://s3.amazonaws.com/alexlarsson/spotify-repo/spotify.flatpakref
-    state: present
+#- name: Install snapd packages
+#  snap:
+#    name:
+#      - obs-studio
+#      - spotify
+#    state: present
 
 - name: Install chrome
   dnf:

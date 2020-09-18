@@ -3,11 +3,20 @@
     name: "https://download1.rpmfusion.org/free/el/rpmfusion-free-release-{{ansible_distribution_major_version}}.noarch.rpm"
     state: present
   when: ansible_distribution == 'Fedora'
-  
+
+- name: Install snapd
+  dnf: 
+    name: snapd
+
+- name: Enable snapd service
+  systemd:
+    state: started
+    name: snapd.socket
+
 - name: Install packages
   dnf: 
     name:
-      - snapd
+      #- snapd
       - htop #This works
       - terminator #This works
       - powertop #This works
@@ -17,7 +26,7 @@
       - tlp #This works
       - tlp-rdw #This works
       - gimp
-      - obs-studio
+      #- obs-studio #FAILED
     state: present
 
 - name: Install the spotify flatpak

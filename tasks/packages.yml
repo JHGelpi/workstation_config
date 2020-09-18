@@ -37,7 +37,8 @@
   get_url:
     url: https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
     dest: /etc/yum.repos.d/
-
+    force_basic_auth: yes
+    
 #- name: Add repository
 #  yum_repository:
 #    name: sublime-text.repo

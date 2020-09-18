@@ -41,10 +41,10 @@
     baseurl: https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
 
 - name: Install sublime-text
-    dnf:
-      name:
-        - sublime-text
-      state: present
+  dnf:
+    name:
+      - sublime-text
+    state: present
 
 #- name: Install chrome
 #  dnf:

@@ -28,17 +28,19 @@
       - com.spotify.Client
     state: present
 
-- name: Install sublime text
+- name: Import gpg key for sublime text
 #Reference https://computingforgeeks.com/how-to-install-sublime-text-3-on-centos-rhel-8/
 - rpm_key:
     state: present
     key: https://download.sublimetext.com/sublimehq-rpm-pub.gpg
 
 - name: Add repository
-    yum_repository:
-      name: sublime-text.repo
-      description: Sublime text repo
-      baseurl: https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+  yum_repository:
+    name: sublime-text.repo
+    description: Sublime text repo
+    baseurl: https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+
+- name: Install sublime-text
     dnf:
       name:
         - sublime-text

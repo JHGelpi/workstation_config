@@ -25,7 +25,7 @@
 - name: Install spotify flatpak
   flatpak:
     name:
-      - https://flathub.org/repo/appstream/com.spotify.Client.flatpakref
+      - "https://flathub.org/repo/appstream/com.spotify.Client.flatpakref"
     state: present
 
 #- name: Import gpg key for sublime text

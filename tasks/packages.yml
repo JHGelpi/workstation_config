@@ -26,19 +26,7 @@
   flatpak:
     name: https://flathub.org/repo/appstream/com.spotify.Client.flatpakref
     state: present
-
-#Import gpg key for sublime text
-#Reference https://computingforgeeks.com/how-to-install-sublime-text-3-on-centos-rhel-8/
-#- rpm_key:
-#    state: present
-#    key: https://download.sublimetext.com/sublimehq-rpm-pub.gpg
-#
-#- name: Download sublime-text repo
-#  get_url:
-#    url: https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
-#    dest: /etc/yum.repos.d/
-#    force_basic_auth: yes
-#    
+ 
 - name: Add sublime-text repository
   yum_repository:
     name: sublime-text.repo

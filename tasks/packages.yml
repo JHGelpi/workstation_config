@@ -25,7 +25,7 @@
 - name: Install flatpak packages
   flatpak:
     name:
-      - com.spotify.Client
+      - "com.spotify.Client"
     state: present
 
 #- name: Import gpg key for sublime text

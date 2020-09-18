@@ -28,7 +28,7 @@
       - com.spotify.Client
     state: present
 
-- name: Import gpg key for sublime text
+#- name: Import gpg key for sublime text
 #Reference https://computingforgeeks.com/how-to-install-sublime-text-3-on-centos-rhel-8/
 - rpm_key:
     state: present

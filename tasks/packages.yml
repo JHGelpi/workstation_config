@@ -24,8 +24,8 @@
 
 #Install Solarized Dark GNOME Theme from GitHub
 - git:
-  repo: https://github.com/rtlewis88/rtl88-Themes/tree/Solarized-Dark-GNOME-Shell-COLORS/Solarized-Dark-Red-GNOME-Shell
-  dest: /tmp
+    repo: https://github.com/rtlewis88/rtl88-Themes/tree/Solarized-Dark-GNOME-Shell-COLORS/Solarized-Dark-Red-GNOME-Shell
+    dest: /tmp
 
 - name: Copy Solarized Dark GNOME Theme from tmp to themes
   copy:
@@ -33,8 +33,8 @@
     dest: /usr/share/themes
 
 - git:
-  repo: https://github.com/daniruiz/flat-remix/tree/master/Flat-Remix-Blue-Dark
-  dest: /tmp
+    repo: https://github.com/daniruiz/flat-remix/tree/master/Flat-Remix-Blue-Dark
+    dest: /tmp
 
 - name: Copy Flat-remix-blue-dark icons from tmp to icons
   copy:

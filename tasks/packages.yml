@@ -24,23 +24,25 @@
 
 #Install Solarized Dark GNOME Theme from GitHub
 - git:
-    repo: https://github.com/rtlewis88/rtl88-Themes/tree/Solarized-Dark-GNOME-Shell-COLORS/Solarized-Dark-Red-GNOME-Shell
-    dest: /tmp/Solarized-Dark-Red-GNOME-Shell
+    #repo: https://github.com/rtlewis88/rtl88-Themes/tree/Solarized-Dark-GNOME-Shell-COLORS/Solarized-Dark-Red-GNOME-Shell
+    repo: https://github.com/rtlewis88/rtl88-Themes.git
+    dest: /tmp/rtl88-Themes
 
-- name: Copy Solarized Dark GNOME Theme from tmp to themes
-  copy:
-    src: /tmp/Solarized-Dark-Red-GNOME-Shell
-    dest: /usr/share/themes
-
+#- name: Copy Solarized Dark GNOME Theme from tmp to themes
+#  copy:
+#    src: /tmp/Solarized-Dark-Red-GNOME-Shell
+#    dest: /usr/share/themes
+#
 - git:
-    repo: https://github.com/daniruiz/flat-remix/tree/master/Flat-Remix-Blue-Dark
-    dest: /tmp/Flat-Remix-Blue-Dark
+    #repo: https://github.com/daniruiz/flat-remix/tree/master/Flat-Remix-Blue-Dark
+    repo: https://github.com/daniruiz/flat-remix.git
+    dest: /tmp/flat-remix
 
-- name: Copy Flat-remix-blue-dark icons from tmp to icons
-  copy:
-    src: /tmp/Flat-Remix-Blue-Dark
-    dest: /usr/share/icons
-
+#- name: Copy Flat-remix-blue-dark icons from tmp to icons
+#  copy:
+#    src: /tmp/Flat-Remix-Blue-Dark
+#    dest: /usr/share/icons
+#
 - name: Install spotify flatpak
   flatpak:
     name: https://flathub.org/repo/appstream/com.spotify.Client.flatpakref

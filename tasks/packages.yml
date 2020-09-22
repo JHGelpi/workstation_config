@@ -36,7 +36,7 @@
 - git:
     #repo: https://github.com/daniruiz/flat-remix/tree/master/Flat-Remix-Blue-Dark
     repo: https://github.com/daniruiz/flat-remix.git
-    dest: ~/Downloads/flat-remix
+    dest: /tmp/flat-remix
 
 #- name: Copy Flat-remix-blue-dark icons from tmp to icons
 #  copy:

@@ -23,11 +23,11 @@
     state: present
 
 #Install Solarized Dark GNOME Theme from GitHub
-- git:
+#- git:
     #repo: https://github.com/rtlewis88/rtl88-Themes/tree/Solarized-Dark-GNOME-Shell-COLORS/Solarized-Dark-Red-GNOME-Shell
-    repo: https://github.com/rtlewis88/rtl88-Themes.git
-    dest: /tmp/rtl88-Themes
-
+#    repo: https://github.com/rtlewis88/rtl88-Themes.git
+#    dest: /tmp/rtl88-Themes
+#
 #- name: Copy Solarized Dark GNOME Theme from tmp to themes
 #  copy:
 #    src: /tmp/Solarized-Dark-Red-GNOME-Shell

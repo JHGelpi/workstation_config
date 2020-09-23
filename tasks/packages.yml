@@ -38,12 +38,14 @@
 #    path: /tmp/flat-remix
 #    state: absent
 
+- name: Download flat-remix repo with wget
+  shell: "wget -x /tmp/flat-remix https://github.com/daniruiz/flat-remix/tree/master/Flat-Remix-Blue-Dark"
 #Fix so that I authenticate to github before trying to d/l the repo
-- git:
+#- git:
     #repo: https://github.com/daniruiz/flat-remix/tree/master/Flat-Remix-Blue-Dark
-    repo: https://github.com/daniruiz/flat-remix.git
-    dest: /tmp/flat-remix
-    separate_git_dir: /tmp/flat-remix.git
+#    repo: https://github.com/daniruiz/flat-remix.git
+#    dest: /tmp/flat-remix
+#    separate_git_dir: /tmp/flat-remix.git
 
 #- name: Copy Flat-remix-blue-dark icons from tmp to icons
 #  copy:

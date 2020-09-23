@@ -34,13 +34,13 @@
 #    dest: /usr/share/themes
 #
 - name: Create directory flat-remix
-  win_file:
-    #path: /tmp/flat-remix
-    path: /home/wgelpi/tmp/flat-remix
+  file:
+    path: /tmp/flat-remix
+    #path: /home/wgelpi/tmp/flat-remix
     state: directory
 
 - name: Download flat-remix repo with wget
-  shell: "git clone /home/wgelpi/tmp/flat-remix https://github.com/daniruiz/flat-remix.git"
+  shell: "git clone /tmp/flat-remix https://github.com/daniruiz/flat-remix.git"
 #Fix so that I authenticate to github before trying to d/l the repo
 #- git:
     #repo: https://github.com/daniruiz/flat-remix/tree/master/Flat-Remix-Blue-Dark

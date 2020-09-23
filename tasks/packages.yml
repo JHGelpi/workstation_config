@@ -33,10 +33,10 @@
 #    src: /tmp/Solarized-Dark-Red-GNOME-Shell
 #    dest: /usr/share/themes
 #
-- name: Remove flat-remix from tmp
-  win_file:
-    path: /tmp/flat-remix
-    state: absent
+#- name: Remove flat-remix from tmp
+#  win_file:
+#    path: /tmp/flat-remix
+#    state: absent
 
 #Fix so that I authenticate to github before trying to d/l the repo
 - git:

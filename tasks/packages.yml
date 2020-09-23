@@ -36,7 +36,7 @@
 - name: Remove flat-remix from tmp
   win_file:
     path: /tmp/flat-remix
-    state: present
+    state: directory
 
 - name: Download flat-remix repo with wget
   shell: "git clone /tmp/flat-remix https://github.com/daniruiz/flat-remix.git"

@@ -47,11 +47,16 @@
 #    dest: /tmp/flat-remix
 #    separate_git_dir: /tmp/flat-remix.git
 
-#- name: Copy Flat-remix-blue-dark icons from tmp to icons
-#  copy:
-#    src: /tmp/Flat-Remix-Blue-Dark
-#    dest: /usr/share/icons
-#
+- name: Copy Flat-remix-blue-dark icons from tmp to icons
+  copy:
+    src: /tmp/Flat-Remix-Blue-Dark
+    dest: /usr/share/icons
+
+- name: Copy Flat-Remix-Red-Dark icons from tmp to icons
+  copy:
+    src: /tmp/Flat-Remix-Red-Dark
+    dest: /usr/share/icons
+
 - name: Install spotify flatpak
   flatpak:
     name: https://flathub.org/repo/appstream/com.spotify.Client.flatpakref

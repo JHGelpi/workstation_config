@@ -36,6 +36,11 @@
 - name: Create directory flat-remix
   file:
     path: /tmp/flat-remix
+    state: absent
+
+- name: Create directory flat-remix
+  file:
+    path: /tmp/flat-remix
     state: directory
 
 - name: Download flat-remix repo with wget

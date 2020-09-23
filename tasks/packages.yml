@@ -33,7 +33,7 @@
 #    src: /tmp/Solarized-Dark-Red-GNOME-Shell
 #    dest: /usr/share/themes
 #
-- name: Create directory flat-remix
+- name: Delete directory flat-remix
   file:
     path: /tmp/flat-remix
     state: absent
@@ -54,12 +54,12 @@
 
 - name: Copy Flat-remix-blue-dark icons from tmp to icons
   copy:
-    src: /tmp/Flat-Remix-Blue-Dark
+    src: /tmp/flat-remix/Flat-Remix-Blue-Dark
     dest: /usr/share/icons
 
 - name: Copy Flat-Remix-Red-Dark icons from tmp to icons
   copy:
-    src: /tmp/Flat-Remix-Red-Dark
+    src: /tmp/flat-remix/Flat-Remix-Red-Dark
     dest: /usr/share/icons
 
 - name: Install spotify flatpak

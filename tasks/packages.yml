@@ -43,6 +43,7 @@
     #repo: https://github.com/daniruiz/flat-remix/tree/master/Flat-Remix-Blue-Dark
     repo: https://github.com/daniruiz/flat-remix.git
     dest: /tmp/flat-remix
+    separate_git_dir: /tmp/flat-remix.git
 
 #- name: Copy Flat-remix-blue-dark icons from tmp to icons
 #  copy:

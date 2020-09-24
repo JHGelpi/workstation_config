@@ -1,0 +1,47 @@
+#Phil's Ansible example
+---
+- name: Sublime test playbook
+  hosts: localhost
+  gather_facts: yes
+  become: yes
+  vars: 
+  # variables would probably be in a separate group_vars file named 'localhost.yaml'
+  # inventory would have a single entry of 'inventory'
+    repos:
+      - name: sublime-text
+        description: Sublime Text - x86_64 - Stable
+        baseurl: https://download.sublimetext.com/rpm/stable/{{ ansible_architecture }}
+        enabled: yes
+        gpgcheck: yes
+        gpgkey: https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+
+      - name: google-chrome
+        description: Google Chrome Stable
+        baseurl: http://dl.google.com/linux/chrome/rpm/stable/{{ ansible_architecture }}
+        enabled: yes
+        gpgcheck: yes
+        gpgkey: https://dl.google.com/linux/linux_signing_key.pub
+    packages:
+      - terminator
+      - openldap-clients.{{ ansible_architecture }}
+      - krb5-workstation.{{ ansible_architecture }}
+  # tasks in a playbook (or role) become generic
+  # thus, personal install playbook can be handed to other people
+  # and they would just supply their own vars file
+  tasks:
+    - name: "Add dnf repo"
+      yum_repository:
+        name: "{{ item.name }}"
+        description: "{{ item.description }}"
+        baseurl: "{{ item.baseurl }}"
+        enabled: "{{ item.enabled }}"
+        gpgcheck: "{{ item.gpgcheck }}"
+        gpgkey: "{{ item.gpgkey }}"
+        state: present
+      with_items: "{{ repos }}"
+    # in this case, not looping because yum module 
+    # can take a list 
+    - name: "add rpms"
+      yum:
+        name: "{{ packages }}"
+        state: latest

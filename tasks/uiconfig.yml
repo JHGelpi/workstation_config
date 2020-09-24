@@ -37,7 +37,7 @@
 #      state: absent
 
 - name: Move Flat-Remix-Blue-Dark with shell command
-  shell: "cp /tmp/flat-remix/Flat-Remix-Blue-Dark/ /usr/share/icons"
+  shell: "cp -R /tmp/flat-remix/Flat-Remix-Blue-Dark/ /usr/share/icons"
 
 - name: Remove Flat-Remix-Red-Dark directory from icons
   file:
@@ -45,7 +45,7 @@
     state: absent
 
 - name: Move Flat-Remix-Red-Dark with shell command
-  shell: "cp /tmp/flat-remix/Flat-Remix-Red-Dark/ /usr/share/icons"
+  shell: "cp -R /tmp/flat-remix/Flat-Remix-Red-Dark/ /usr/share/icons"
 #Add in conditional if/then/else to check for folder presence first
 #- name: Copy Flat-remix-blue-dark icons from tmp to icons
 #  copy:

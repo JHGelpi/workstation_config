@@ -22,9 +22,9 @@
   shell: "git clone https://github.com/daniruiz/flat-remix.git /tmp/flat-remix"
 
 - name: Remove Flat-Remix-Blue-Dark directory from icons
-    file:
-      path: /usr/share/icons/Flat-Remix-Blue-Dark/
-      state: absent
+  file:
+    path: /usr/share/icons/Flat-Remix-Blue-Dark/
+    state: absent
 #
 #- name: Move flat-remix with shell command
 #  shell: "cp /tmp/flat-remix/Flat-Remix-Blue-Dark/ /usr/share/icons"
@@ -38,9 +38,9 @@
   shell: "cp /tmp/flat-remix/Flat-Remix-Blue-Dark/ /usr/share/icons"
 
 - name: Remove Flat-Remix-Red-Dark directory from icons
-    file:
-      path: /usr/share/icons/Flat-Remix-Red-Dark/
-      state: absent
+  file:
+    path: /usr/share/icons/Flat-Remix-Red-Dark/
+    state: absent
 
 - name: Move Flat-Remix-Red-Dark with shell command
   shell: "cp /tmp/flat-remix/Flat-Remix-Red-Dark/ /usr/share/icons"

@@ -11,9 +11,10 @@
 #
 #Research block command (block and rescue and always)
 - name: Delete directory flat-remix
-  file:
-    path: /tmp/flat-remix
-    state: absent
+  shell: "rm -r /tmp/flat-remix"
+#  file:
+#    path: /tmp/flat-remix
+#    state: absent
 
 - name: Create directory flat-remix
   file:

@@ -23,16 +23,18 @@
 - name: Download flat-remix repo with wget
   shell: "git clone https://github.com/daniruiz/flat-remix.git /tmp/flat-remix"
 
-- name: Move flat-remix with shell command
+- name: Remove Flat-Remix-Blue-Dark directory from icons
   shell: "rm -r /usr/share/icons/Flat-Remix-Blue-Dark/"
+
+- name: Move flat-remix with shell command
   shell: "mv /tmp/flat-remix/Flat-Remix-Blue-Dark/ /usr/share/icons"
 #Add in conditional if/then/else to check for folder presence first
 #- name: Copy Flat-remix-blue-dark icons from tmp to icons
 #  copy:
 #    src: /tmp/flat-remix/Flat-Remix-Blue-Dark
 #    dest: /usr/share/icons
-
-- name: Copy Flat-Remix-Red-Dark icons from tmp to icons
-  copy:
-    src: /tmp/flat-remix/Flat-Remix-Red-Dark
-    dest: /usr/share/icons
+#
+#- name: Copy Flat-Remix-Red-Dark icons from tmp to icons
+#  copy:
+#    src: /tmp/flat-remix/Flat-Remix-Red-Dark
+#    dest: /usr/share/icons

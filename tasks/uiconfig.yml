@@ -27,16 +27,16 @@
 #    repo: https://github.com/daniruiz/flat-remix.git
 #    dest: /tmp/flat-remix
 #    separate_git_dir: /tmp/flat-remix.git
-
-- name: Remove Flat-remix-blue-dark dir if exists
-  file:
-    path: /usr/share/icons/Flat-Remix-Blue-Dark
-    state: absent
-
-- name: Copy Flat-remix-blue-dark icons from tmp to icons
-  copy:
-    src: /tmp/flat-remix/Flat-Remix-Blue-Dark
-    dest: /usr/share/icons
+#
+#- name: Remove Flat-remix-blue-dark dir if exists
+#  file:
+#    path: /usr/share/icons/Flat-Remix-Blue-Dark
+#    state: absent
+#
+#- name: Copy Flat-remix-blue-dark icons from tmp to icons
+#  copy:
+#    src: /tmp/flat-remix/Flat-Remix-Blue-Dark
+#    dest: /usr/share/icons
 
 - name: Remove Flat-Remix-Red-Dark dir if exists
   file:
@@ -47,8 +47,3 @@
   copy:
     src: /tmp/flat-remix/Flat-Remix-Red-Dark
     dest: /usr/share/icons
-
-- name: Install spotify flatpak
-  flatpak:
-    name: https://flathub.org/repo/appstream/com.spotify.Client.flatpakref
-    state: present

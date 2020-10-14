@@ -13,13 +13,17 @@
 #- name: Install bitwarden
 #  shell: #https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
 #
+- name: Download and install slack
+  shell: "wget https://downloads.slack-edge.com/linux_releases/slack-4.10.0-0.1.fc21.x86_64.rpm -o /tmp"
+  shell: "dnf install slack"
+
 - name: Install packages
   dnf: 
     name:
       - htop
       - terminator
       - powertop
-      - slack
+#      - slack
       - gnome-tweak-tool
       - python3
       - tlp

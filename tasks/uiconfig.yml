@@ -9,7 +9,9 @@
 #    src: /tmp/Solarized-Dark-Red-GNOME-Shell
 #    dest: /usr/share/themes
 #
-#Research block command (block and rescue and always)
+####################
+#Install icon themes
+####################
 - name: Delete directory flat-remix
   file:
     path: /tmp/flat-remix
@@ -20,7 +22,7 @@
     path: /tmp/flat-remix
     state: directory
 
-- name: Download flat-remix repo with wget
+- name: Download flat-remix repo with git clone
   shell: "git clone https://github.com/daniruiz/flat-remix.git /tmp/flat-remix"
 
 - name: Remove Flat-Remix-Blue-Dark directory from icons
@@ -38,3 +40,27 @@
 
 - name: Move Flat-Remix-Red-Dark with shell command
   shell: "cp -R /tmp/flat-remix/Flat-Remix-Red-Dark/ /usr/share/icons"
+
+#####################
+#Install shell themes
+#####################
+- name: Delete shell theme tmp directory
+  file:
+    path: /tmp/flat-remix-shell
+    state: absent
+
+- name: Create shell tmp directory
+  file:
+    path: /tmp/flat-remix-shell
+    state: directory
+
+- name: Download flat-remix-shell repo with git clone
+  shell: "git clone https://github.com/daniruiz/flat-remix-gnome.git /tmp/flat-remix-shell"
+
+- name: Create themes directory
+  file:
+    path: /usr/share/themes
+    state: directory
+
+- name: Copy flat-remix-shell themes to usr themes
+  shell: "cp -r /tmp/flat-remix-shell/Flat-Remix* /usr/share/themes/"

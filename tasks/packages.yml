@@ -8,8 +8,11 @@
 #  when: ansible_distribution == 'Fedora'
 #
 - name: Enable RPM Fusion repository for Fedora
-  shell: "sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
+  shell: "sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 
+#- name: Install bitwarden
+#  shell: #https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
+#
 - name: Install packages
   dnf: 
     name:

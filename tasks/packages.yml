@@ -17,10 +17,10 @@
   shell: "wget -O /tmp/slack.rpm https://downloads.slack-edge.com/linux_releases/slack-4.10.0-0.1.fc21.x86_64.rpm"
 
 - name: Install slack
-  shell: "rpm -U ./tmp/slack.rpm"
+  shell: "rpm -U /tmp/slack.rpm"
 
 - name: Remove slack rpm from tmp
-  shell: "rm ./tmp/slack.rpm"
+  shell: "rm /tmp/slack.rpm"
 
 - name: Install packages
   dnf: 

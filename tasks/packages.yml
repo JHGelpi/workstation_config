@@ -13,10 +13,14 @@
 #- name: Install bitwarden
 #  shell: #https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
 #
-- name: Download and install slack
-  shell: "wget https://downloads.slack-edge.com/linux_releases/slack-4.10.0-0.1.fc21.x86_64.rpm -o tmp"
+- name: Download slack
+  shell: "wget https://downloads.slack-edge.com/linux_releases/slack-4.10.0-0.1.fc21.x86_64.rpm /tmp/"
+  
+- name: Install slack
   shell: "rpm -U tmp/slack*.rpm"
-#  shell: "rm tmp/slack*.rpm"
+
+- name: Remove slack rpm from tmp
+  shell: "rm /tmp/slack*.rpm"
 
 - name: Install packages
   dnf: 

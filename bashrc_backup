@@ -1,0 +1,50 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific environment
+PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+function funcRDP() {
+    xfreerdp +compression /bpp:32 /w:1440 /h:900 /u:wgelpi /d:win /cert-ignore +clipboard /drive:wgelpi,/home/wgelpi /v:$1
+}
+
+function funcRDPfull() {
+    xfreerdp +compression /bpp:32 /f /u:wgelpi@win /cert-ignore +clipboard /drive:wgelpi,/home/wgelpi /v:$1
+}
+
+#function runcRDPdev() {
+#	xfreerdp +compression /bpp:32 /w:1440 /h:900 /u:wgelpi /d:win /cert-ignore +clipboard /drive:wgelpi,/home/wgelpi /v:$1
+#}
+
+#tableau VM - Login to Tableau terminal services
+alias tableauvm="funcRDP bitblprod.win.redhat.com"
+alias tableauvmfull="funcRDPfull bitblprod.win.redhat.com"
+alias tableauvmdev="funcRDP bitbldev.win.redhat.com"
+export HISTCONTROL=erasedups
+
+#git commit function 
+function gitPush(){
+	git status
+	git add -A
+	git commit -m "${1}"
+	git push origin main
+	git status
+}
+
+alias gitpush="gitPush"
+
+function testParms(){
+	echo ${1}
+	echo ${2}
+}
+
+alias testparm="testParms"

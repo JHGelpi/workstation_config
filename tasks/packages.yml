@@ -22,6 +22,9 @@
 - name: Remove slack rpm from tmp
   shell: "rm /tmp/slack.rpm"
 
+- name: Install Joplin notes
+  shell: "wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash"
+
 - name: Install packages
   dnf: 
     name:

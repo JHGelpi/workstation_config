@@ -38,7 +38,7 @@
       - tlp-rdw
       - gimp
       - pavucontrol
-      - "https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
+#      - "https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
     state: present
 
 - name: Install spotify flatpak

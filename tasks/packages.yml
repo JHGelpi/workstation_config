@@ -46,11 +46,11 @@
     name: https://flathub.org/repo/appstream/com.spotify.Client.flatpakref
     state: present
 
-- name: Install kate text editor
-   flatpak: 
-     name: flatpak install flathub org.kde.kate
-     state: present
-
+#- name: Install kate text editor
+#   flatpak: 
+#     name: flatpak install flathub org.kde.kate
+#     state: present
+#
 - name: Add sublime-text repository
   yum_repository:
     name: sublime-text.repo

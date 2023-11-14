@@ -66,4 +66,9 @@
     name:
       - sublime-text
     state: present
-#Install insync
+#Install Google Chrome
+- name: Install Google Chrome
+  dnf:
+    name:
+      - fedora-workstation-repositories
+      - google-chrome-stable

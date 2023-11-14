@@ -63,4 +63,4 @@
     state: directory
 
 - name: Copy flat-remix-shell themes to usr themes
-  shell: "cp -r /tmp/flat-remix-shell/Flat-Remix* /usr/share/themes/"
+  shell: "cp -r /tmp/flat-remix-shell/flat-remix* /usr/share/themes/"
